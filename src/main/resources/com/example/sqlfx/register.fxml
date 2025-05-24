@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.sqlfx.RegisterController"
+           style="-fx-background-color: white;">
+
+    <VBox alignment="CENTER" spacing="15.0" maxWidth="300">
+        <Label text="Sign Up" textFill="#164863">
+            <font>
+                <Font name="Nirmala Text" size="36.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="usernameField"
+                   promptText="Username"
+                   style="-fx-background-color: #b1d7e2; -fx-font-weight: bold; -fx-pref-width: 250;"
+                   prefHeight="40"
+                   maxWidth="Infinity"/>
+
+        <PasswordField fx:id="passwordField"
+                       promptText="Password"
+                       style="-fx-background-color: #b1d7e2; -fx-pref-width: 250;"
+                       prefHeight="40"
+                       maxWidth="Infinity"/>
+
+        <Button text="Sign up"
+                onAction="#handleRegister"
+                style="-fx-background-color: #b1d7e2; -fx-pref-width: 250;"
+                prefHeight="40"
+                maxWidth="Infinity"/>
+
+        <HBox alignment="CENTER" spacing="5">
+            <Label text="Do you already have an account?" />
+            <Hyperlink text="Return." onAction="#goToLogin" />
+        </HBox>
+    </VBox>
+
+</StackPane>

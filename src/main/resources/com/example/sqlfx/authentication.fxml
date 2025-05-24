@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="com.example.sqlfx.UserAuthS$AuthController"
+           prefWidth="350" prefHeight="400">
+
+    <!-- Login Panel -->
+    <VBox fx:id="loginPanel" alignment="CENTER" spacing="15" visible="true">
+        <padding>
+            <Insets top="50" right="50" bottom="50" left="50"/>
+        </padding>
+        
+        <Label text="User Login" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        
+        <TextField fx:id="loginUsername" promptText="Username" maxWidth="200"/>
+        
+        <PasswordField fx:id="loginPassword" promptText="Password" maxWidth="200"/>
+        
+        <Label fx:id="loginError" textFill="red" wrapText="true"/>
+        
+        <Button text="Login" onAction="#handleLogin" prefWidth="200" 
+                style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+        
+        <Label text="Don't have an account?"/>
+        
+        <Button text="Register" onAction="#showRegister" prefWidth="200"/>
+    </VBox>
+
+    <!-- Register Panel -->
+    <VBox fx:id="registerPanel" alignment="CENTER" spacing="15" visible="false">
+        <padding>
+            <Insets top="50" right="50" bottom="50" left="50"/>
+        </padding>
+        
+        <Label text="Register" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        
+        <TextField fx:id="registerUsername" promptText="Username" maxWidth="200"/>
+        
+        <PasswordField fx:id="registerPassword" promptText="Password" maxWidth="200"/>
+        
+        <PasswordField fx:id="confirmPassword" promptText="Confirm Password" maxWidth="200"/>
+        
+        <Label fx:id="registerError" textFill="red" wrapText="true"/>
+        
+        <Button text="Register" onAction="#handleRegister" prefWidth="200"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        
+        <Button text="Back to Login" onAction="#showLogin" prefWidth="200"/>
+    </VBox>
+
+    <!-- Main Panel -->
+    <VBox fx:id="mainPanel" alignment="CENTER" spacing="20" visible="false">
+        <padding>
+            <Insets top="50" right="50" bottom="50" left="50"/>
+        </padding>
+        
+        <Label fx:id="welcomeLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        
+        <Label text="You are successfully logged in!" style="-fx-font-size: 16px;"/>
+        
+        <Button text="Logout" onAction="#handleLogout" prefWidth="200"
+                style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+    </VBox>
+
+</StackPane>
